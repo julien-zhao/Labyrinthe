@@ -19,14 +19,21 @@ public class Main {
 		instances = Integer.parseInt(sc.nextLine());
 
 		char[][] map = null;
-
 		//le nombre de ligne et de colonne
 		int nbLigne = 0;
 		int nbColonne = 0;
 		for (int i = 0; i < instances; i++) {
 			System.out.println("Saisir le nombre de ligne et nombre de colonne séparant par un espace");
 			StringTokenizer tokenizer = new StringTokenizer(sc.nextLine(), " ");
+			System.out.print("Rappel : \n");
+			System.out.println("'.' = libre");
+			System.out.println("'#' = mur");
+			System.out.println("'F' = feu");
+			System.out.println("'D' = début");
+			System.out.println("'S' = sortie");
+			
 			System.out.println("Veuillez construile le labyrinthe ");
+			
 			nbLigne = (tokenizer.hasMoreTokens()) ? Integer.parseInt(tokenizer.nextToken()) : 0;
 			nbColonne = (tokenizer.hasMoreTokens()) ? Integer.parseInt(tokenizer.nextToken()) : 0;
 			
@@ -39,11 +46,11 @@ public class Main {
 				}
 			}
 
-			Graph graph = new Graph(); // Appel au constructeur : création d'une nouvelle instance de l'objet Graph.
-			int startV = 0, endV = 0; // Point de départ et point de sortie.
+			Graph graph = new Graph(); 
+			int startV = 0, endV = 0;
 			for (int j = 0; j < nbLigne; j++) {
 				for (int k = 0; k < nbColonne; k++) {
-					graph.addVertex(map[j][k], 1, j, k); // Ajout d'un sommet au graphe.
+					graph.addVertex(map[j][k], 1, j, k); 
 					if (map[j][k] == 'D') {
 						startV = j * nbColonne + k;
 					}

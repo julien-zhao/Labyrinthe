@@ -28,9 +28,8 @@ public class AStar {
 	 * @param board   l'affichage.
 	 * @return une liste d'entiers correspondant au chemin.
 	 */
-	public static LinkedList<Integer> AStar(Graph graph, int start, int end, int ncols, int numberV, Board board) {
-		graph.vertexlist.get(start).timeFromSource = 0; // Le point de départ a une distance nulle depuis le point de
-														// départ.
+	public static LinkedList<Integer> AlgoAStar(Graph graph, int start, int end, int ncols, int numberV, Board board) {
+		graph.vertexlist.get(start).timeFromSource = 0; 
 		int number_tries = 0; // Nombre de nœuds explorés.
 
 		// TODO: mettre tous les noeuds du graphe dans la liste des noeuds à visiter:
@@ -43,7 +42,6 @@ public class AStar {
 		// heuristic : une distance estimée au nœud d’arriver.
 		int i = 0;
 		for (Vertex vertex : graph.vertexlist) {
-			// distance(int Xa, int Ya, int Xb, int Yb)
 			vertex.heuristic = distance(i % ncols, i / ncols, end % ncols, end / ncols);
 			i++;
 		}

@@ -7,7 +7,8 @@ La compléxité des deux algorithmes sont de O(n^2)
 
 
 Utilisation :
-Il faudrais utiliser agrs[0] qui est un graphe.txt dans run configuration et exécuté la class APP
+Il faudrait passer en argument un graphe.txt et le choix de l'algo (entre dijktra ou astar) séparé par un espace
+et ensuite exécuté la class APP.
 
 
 

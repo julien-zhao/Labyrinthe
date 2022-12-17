@@ -19,7 +19,7 @@ public class Dijkstra {
 	 * @param board	    l'affichage
 	 * @return une liste d'entiers correspondant au chemin.
 	 */
-	public static LinkedList<Integer> Dijkstra(Graph graph, int start, int end, int numberV, Board board)
+	public static LinkedList<Integer> AlgoDijkstra(Graph graph, int start, int end, int numberV, Board board)
 	{
 		int min_v;
 		double timeFromSourceMin;

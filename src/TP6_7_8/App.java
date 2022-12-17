@@ -144,9 +144,9 @@ public class App {
 			// TODO: laisser le choix entre Dijkstra et A*
 			LinkedList<Integer> path;
 			if (args[1].equals("dijkstra")) {
-				path = Dijkstra.Dijkstra(graph, startV, endV, nlines * ncols, board);
+				path = Dijkstra.AlgoDijkstra(graph, startV, endV, nlines * ncols, board);
 			} else {
-				path = AStar.AStar(graph, startV, endV, ncols, nlines * ncols, board);
+				path = AStar.AlgoAStar(graph, startV, endV, ncols, nlines * ncols, board);
 			}
 
 			// Écriture du chemin dans un fichier de sortie

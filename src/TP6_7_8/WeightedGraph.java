@@ -3,10 +3,10 @@ package TP6_7_8;
 import java.util.LinkedList;
 import java.util.ArrayList;
 
+//Class définissant un graphe pondéré
 public class WeightedGraph {
-
+	//Sous-class pour une arrête 
 	static class Edge {
-
 		int source;
 		int destination;
 		double weight;
@@ -17,9 +17,8 @@ public class WeightedGraph {
 			this.weight = weight;
 		}
 	}
-
+	// Sous-classe pour un sommet 
 	static class Vertex {
-
 		double indivTime;
 		double timeFromSource;
 		double heuristic;
@@ -50,7 +49,6 @@ public class WeightedGraph {
 		Graph() {
 			vertexlist = new ArrayList<Vertex>();
 		}
-
 
 		public void addVertex(double indivTime) {
 			Vertex v = new Vertex(num_v);
@@ -84,6 +82,6 @@ public class WeightedGraph {
 		graph.addEgde(4, 0, 4);
 		graph.addEgde(4, 1, 4); 
 		graph.addEgde(4, 5, 6); 
-		// graph.printGraph();
+		//graph.printGraph();
 	}
 }
