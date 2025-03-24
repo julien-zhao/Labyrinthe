@@ -1,4 +1,4 @@
-# Labyrinthe
+# Maze Solver
 
 ## Description
 
